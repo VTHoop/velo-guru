@@ -1,0 +1,73 @@
+<div class="filter">
+  <div class="filter__label">Filter</div>
+  <div class="filter__criteria">
+    <div class="filter__criteria-group">
+      <div class="filter__criteria-item" (click)=brandFilterClick()>
+        <div class="filter__criteria-item--label">Brand</div>
+        <div class="filter__criteria-item--btn">
+          <i class="material-icons" *ngIf="!brandFilterOpen">expand_more</i>
+          <i class="material-icons" *ngIf="brandFilterOpen">expand_less</i>
+        </div>
+      </div>
+      <div class="filter__criteria-list" *ngIf="brandFilterOpen">
+        <div class="filter__criteria-list-item" *ngFor="let brand of brandFilters">
+          <div class="filter__criteria-list-item--label">{{brand}}</div>
+          <input type="checkbox" class="filter__criteria-list-item--check" name="brand{{brand}}" value="{{brand}}">
+
+        </div>
+      </div>
+    </div>
+    <div class="filter__criteria-item">Category</div>
+    <div class="filter__criteria-item">Material</div>
+    <div class="filter__criteria-item">Brake Type</div>
+  </div>
+</div>
+
+<div class="all-of-it">
+
+  <div class="container">
+    <div class="bikes">
+      <div *ngFor="let bike of bikes | async" class="bike" (click)="onBikeClick(bike)">
+        <img src="../../assets/img/bicycle-icon.jpg" alt="" class="bike__image">
+        <div class="bike__content">
+          <div class="bike__year">{{bike.year}}</div>
+          <div class="bike__brand">{{bike.brand}}</div>
+          <div class="bike__model">{{bike.model}}</div>
+          <div class="bike__submodel">{{bike.submodel}}</div>
+        </div>
+        <a href="#" class="btn btn-dark bike__btn">More Info</a>
+      </div>
+    </div>
+  </div>
+  <div class="aside" *ngIf="selectedBike && trayVisible">
+    <div class="selected-bike__top">
+      <div class="aside__close"><i class="material-icons" (click)="closeTray()">highlight_off</i></div>
+      <img src="../../assets/img/bicycle-icon.jpg" alt="" class="selected-bike__image">
+    </div>
+    <h3 class="heading-5">Year</h3>
+    <div class="selected-bike__year">{{selectedBike.year}}</div>
+    <h3 class="heading-5">Brand</h3>
+    <div class="selected-bike__brand">{{selectedBike.brand}}</div>
+    <h3 class="heading-5">Model</h3>
+    <div class="selected-bike__model">{{selectedBike.model}}</div>
+    <h3 class="heading-5">Category</h3>
+    <div class="selected-bike__submodel">{{selectedBike.category}}</div>
+    <h3 class="heading-5">Subcategory</h3>
+    <div class="selected-bike__submodel">{{selectedBike.subcategory}}</div>
+    <h3 class="heading-5">Level</h3>
+    <div class="selected-bike__submodel">{{selectedBike.level}}</div>
+    <h3 class="heading-5">Material</h3>
+    <div class="selected-bike__submodel">{{selectedBike.material}}</div>
+    <h3 class="heading-5">Brake Type</h3>
+    <div class="selected-bike__submodel">{{selectedBike.brakeType}}</div>
+    <h3 class="heading-5">Price</h3>
+    <div class="selected-bike__submodel">{{selectedBike.price | currency}}</div>
+    <h3 class="heading-5">Primary Color</h3>
+    <div class="selected-bike__submodel">{{selectedBike.primaryColor}}</div>
+    <h3 class="heading-5">Accent Color</h3>
+    <div class="selected-bike__submodel">{{selectedBike.accentColor}}</div>
+    <h3 class="heading-5">Visit Page</h3>
+    <div class="selected-bike__submodel">{{selectedBike.url}}</div>
+
+  </div>
+</div>

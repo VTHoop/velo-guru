@@ -1,0 +1,66 @@
+.section-features {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(var(--color-gray-dark-1), 0.85),
+        rgba(var(--color-gray-dark-2), 0.85)
+      ),
+      url("../../../assets/img/lots-of-bikes.jpg");
+    background-size: cover;
+    transform: skewY(-7deg);
+    padding: 15rem;
+    margin-top: -11rem;
+    text-align: center;
+    box-shadow: 0 2rem 4.5rem rgba(black, .2);
+  
+    & > * {
+      transform: skewY(7deg);
+    }
+  
+    &__container {
+      min-height: 50vh;
+      padding: 0rem 3rem 5rem 3rem;
+      box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.15);
+      background-color: white;
+      border-radius: 3px;
+      transition: all 0.3s;
+  
+      &:hover {
+        transform: translateY(-1.5rem) scale(1.05);
+        box-shadow: 0 3.5rem 4rem rgba($color: #000000, $alpha: 0.25);
+      }
+    }
+  
+    &__icon {
+      display: inline-block;
+      // background-image: linear-gradient(
+      //   to right bottom,
+      //   rgba(var(--color-primary-w-trans), 0.8),
+      //   rgba(var(--color-gray-dark-1), 0.8)
+      // );
+      // -webkit-background-clip: text;
+      // background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      color: black;
+      font-size: 15rem;
+  
+      &::before {
+        display: inline;
+      }
+    }
+  
+    &__description {
+      margin-top: -5rem;
+    }
+  
+    &__heading {
+      min-height: 5.2rem;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin-bottom: var(--margin-bottom-small)
+    }
+  
+    &__paragraph {
+      font-size: 1.2rem;
+    }
+  }
+  

@@ -1,0 +1,104 @@
+.splash {
+  &-page {
+    height: 95vh;
+    background-image: 
+    //   linear-gradient(
+    //       to right bottom,
+    //       rgba(59, 59, 59, 0.4),
+    //       rgba(153, 153, 153, 0.4)
+        // ),
+         url('../../../assets/img/velo-header.jpg');
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    color: #ddd;
+    font-weight: 500;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+  }
+
+  &-shape {
+    width: 100%;
+    height: 95vh;
+    background-color: var(--color-primary-w-trans);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+
+  &-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.heading-primary-title {
+  display: block;
+  font-size: 6rem;
+  font-weight: 800;
+  letter-spacing: 3.5rem;
+  margin-bottom: 1rem;
+
+  text-shadow: -2px -2px 0 var(--color-primary), 2px -2px 0 var(--color-primary), -2px 2px 0 var(--color-primary), 2px 2px 0 var(--color-primary);
+}
+
+.heading-primary-subtitle {
+  display: block;
+  letter-spacing: 1.75rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+a.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    display: inline-block;
+    margin: 1rem 0rem;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.8rem 1rem #4b4b4b;
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.3rem 0.5rem #4b4b4b;
+  }
+
+  &-white:link,
+  &-white:visited {
+    background-color: #fff;
+    color: #777;
+    border: 0.3rem solid #4b4b4b;
+    border-radius: 10rem;
+    font-weight: 700;
+  }
+
+  &--heading:link,
+  --heading:visited {
+    display: table;
+    margin: 1rem auto;
+    min-height: 7rem;
+  }
+
+  div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.light {
+  color: #f3f3f3;
+}

@@ -1,0 +1,128 @@
+.filter {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1.4rem;
+
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: 2rem 3rem;
+
+  &__label {
+    flex: 1;
+  }
+
+  &__criteria {
+    flex: 0 0 50%;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: 600;
+  }
+
+  &__criteria-item {
+    display: flex;
+  }
+  &__criteria-list {
+    background-color: white;
+    border: 1px solid black;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+
+    position: absolute;
+    top: 5rem;
+    z-index: 5;
+
+    &-item{
+      display: flex;
+      justify-content: space-between;
+      & > * {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+.all-of-it {
+  display: flex;
+}
+
+.container {
+  flex: 1;
+}
+
+.bikes {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 4rem;
+}
+
+.bike {
+  display: grid;
+
+  background-color: white;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+
+  font-size: 1.2rem;
+
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &__image {
+    width: 25rem;
+    border-bottom: 1px solid black;
+  }
+  &__content {
+    background-color: var(--color-light);
+  }
+  &__year,
+  &__brand,
+  &__model,
+  &__submodel {
+    margin: 0 4rem;
+  }
+  &__year {
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-top: 4rem;
+  }
+  &__brand {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  &__submodel {
+    margin-bottom: 4rem;
+  }
+
+  &__btn {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+.aside {
+  flex: 0 0 25%;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.4);
+
+  & > * {
+    padding: 0rem 2rem;
+  }
+
+  &__close {
+    margin: 1rem 0rem;
+    text-align: right;
+  }
+}
+
+.selected-bike {
+  &__image {
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+}

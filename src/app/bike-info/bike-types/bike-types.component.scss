@@ -1,0 +1,181 @@
+.bike-types {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  min-height: 80vh;
+
+  &__section {
+    &-title {
+      padding-top: 14rem;
+    }
+  }
+
+  &__card {
+    margin: 2.5rem 0rem;
+
+    box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  &__label {
+    // height: 20rem;
+    width: 100%;
+
+    color: white;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    flex: 0 0 35%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--road {
+      background-image: linear-gradient(to right, rgba(gray, 0.7), rgba(darken(gray, 30%), 0.7)),
+        url('../../../assets/img/road-bike.jpg');
+      background-size: cover;
+    }
+
+    &--mountain {
+      background-image: linear-gradient(to right, rgba(gray, 0.7), rgba(darken(gray, 30%), 0.7)),
+        url('../../../assets/img/mountain-bike.jpg');
+      background-size: cover;
+    }
+
+    &--triathlon {
+      background-image: linear-gradient(to right, rgba(gray, 0.7), rgba(darken(gray, 30%), 0.7)),
+        url('../../../assets/img/tt-bike.jpg');
+      background-size: cover;
+    }
+  }
+
+  &__description {
+    flex: 1;
+    align-self: center;
+    padding: 4rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--color-dark);
+  }
+}
+
+.learn-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+.road {
+  margin-top: 13rem;
+  min-height: 100vh;
+  background-color: var(--color-light-2);
+  color: var(--color-light);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+
+  transform: skewY(-7deg);
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+.mountain {
+  margin-top: 13rem;
+  min-height: 100vh;
+  background-color: var(--color-light);
+
+  transform: skewY(-7deg);
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+.triathlon {
+  margin-top: 13rem;
+  min-height: 100vh;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+
+  transform: skewY(-7deg);
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.carousel-container {
+  background-color: white;
+  box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.4);
+  min-height: 70vh;
+  margin: 4rem 8rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    height: 6rem;
+    color: white;
+    box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    background-color: var(--color-primary);
+
+    display: flex;
+    flex-direction: row;
+
+
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    &-item {
+      flex: 1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.selected {
+        background-color: white;
+        color: var(--color-primary);
+        height: 100%;
+        border-bottom: 4px solid var(--color-accent);
+      }
+
+      p {
+        padding: 0 2rem;
+      }
+    }
+  }
+  &__content {
+    margin: 0 6rem;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin: 1rem;
+    }
+  }
+
+  .btn {
+    margin-top: 4rem;
+    width: 50%;
+    max-width: 40rem;
+  }
+}

@@ -1,0 +1,82 @@
+<div class="container">
+  <h1>Add Bike</h1>
+  <form action="#" #bikeForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input type="text" class="form-control" id="year" required name="year" [(ngModel)]="bike.year" />
+    </div>
+    <div class="form-group">
+      <label for="brand">Brand</label>
+      <select name="brand" id="brand" class="form-control" required [(ngModel)]="bike.brand">
+        <option *ngFor="let brand of brands" [value]="brand">{{
+          brand
+        }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="model">Model</label>
+      <input type="text" class="form-control" id="model" name="model" required [(ngModel)]="bike.model" />
+    </div>
+    <div class="form-group">
+      <label for="submodel">Submodel</label>
+      <input type="text" class="form-control" id="submodel" name="submodel" required [(ngModel)]="bike.submodel" />
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select name="category" id="category" class="form-control" required [(ngModel)]="bike.category">
+        <option *ngFor="let category of categories" [value]="category">{{
+              category
+            }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="subcategory">Subcategory</label>
+      <select name="subcategory" id="subcategory" class="form-control" required [(ngModel)]="bike.subcategory">
+        <option *ngFor="let subcategory of subcategories" [value]="subcategory">{{
+                subcategory
+              }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="level">Level</label>
+      <select name="level" id="level" class="form-control" required [(ngModel)]="bike.level">
+        <option *ngFor="let level of levels" [value]="level">{{
+                  level
+                }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="material">Material</label>
+      <select name="material" id="material" class="form-control" required [(ngModel)]="bike.material">
+        <option *ngFor="let material of materials" [value]="material">{{
+                  material
+                }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="brakeType">Brake Type</label>
+      <select name="brakeType" id="brakeType" class="form-control" required [(ngModel)]="bike.brakeType">
+        <option *ngFor="let brakeType of brakeTypes" [value]="brakeType">{{
+              brakeType
+                  }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="text" class="form-control" id="price" name="price" required [(ngModel)]="bike.price" />
+    </div>
+    <div class="form-group">
+      <label for="primaryColor">Primary Color</label>
+      <input type="text" class="form-control" id="primaryColor" name="primaryColor" required [(ngModel)]="bike.primaryColor" />
+    </div>
+    <div class="form-group">
+      <label for="accentColor">Accent Color</label>
+      <input type="text" class="form-control" id="accentColor" name="accentColor" required [(ngModel)]="bike.accentColor" />
+    </div>
+    <div class="form-group">
+      <label for="url">URL</label>
+      <input type="text" class="form-control" id="url" name="url" required [(ngModel)]="bike.url" />
+    </div>
+    <button type="submit" (click)="onSubmit()" class="btn btn-primary" [disabled]="bikeForm.invalid">Submit</button>
+  </form>
+</div>

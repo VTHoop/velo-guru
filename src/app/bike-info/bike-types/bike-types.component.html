@@ -1,0 +1,113 @@
+<div>
+  <div class="container">
+    <h1 class="heading-1">Bike Types</h1>
+    <h2 class="heading-2">Something, something something bike types</h2>
+
+    <div class="bike-types">
+      <div class="bike-types__card" (click)="moveToRoad()">
+        <div class="bike-types__label bike-types__label--road">
+          <h3>Road</h3>
+        </div>
+        <div class="bike-types__description paragraph-text">
+          <p>
+            With big wheels and skinny tires road bikes are built with the general purpose of speed and long distances
+            on cement and asphalt roads.
+            Several specializations of road bikes are being designed these days,
+            but for simplicity's sake, we analyze 3 categories:
+          </p>
+          <p>
+            Performance/Race, Aero, Endurance
+          </p>
+          <!-- <p>
+            There are several other bikes that can be ridden on the road
+            including gravel/adventure, e-bikes, and city bikes and they could
+            be covered if there is enough desire.
+          </p> -->
+        </div>
+      </div>
+      <div class="bike-types__card">
+        <div class="bike-types__label bike-types__label--mountain">
+          <h3>Mountain</h3>
+        </div>
+        <div class="bike-types__description paragraph-text">
+          <p>
+            Designed to be able to tackle the toughest territory, mountain bikes
+            can be the most overwhelming of bikes to buy with the amount of
+            customizations possible.
+          </p>
+          <p>
+            Rigid bikes, hard tails, and full suspension.
+          </p>
+        </div>
+      </div>
+      <div class="bike-types__card">
+        <div class="bike-types__label bike-types__label--triathlon">
+          <h3>Triathlon/TT</h3>
+        </div>
+        <div class="bike-types__description paragraph-text">
+          <p>
+            As the name indicates, triathlon (typically called "tri") or TT
+            bikes are designed for competing in triathlons. They are typically
+            designed for riding on straight and flat roads. If you plan on
+            riding with friends, it's generally recommended to get a standard
+            road bike.
+            <!-- Triathlon/Time Trial bikes are designed for competition
+            and not recreational purposes. They are focused on aerodynamics
+            which makes them the fastest road bike in a straight line and
+            against the clock. Such speed comes at the expense of handling and
+            long-distance comfort. Designed for good quality sealed roads only,
+            this type of bike is best ridden/raced alone or in small groups due
+            to the pointed and narrow handlebar position that doesn't lend
+            itself to agility or fast braking. -->
+          </p>
+        </div>
+      </div>
+      <div class="learn-more">
+        <p>Dive Deeper</p>
+        <div class="learn-more--arrow">Arrow</div>
+      </div>
+    </div>
+  </div>
+  <div class="road" id="road" #road>
+    <h3 class="heading-3 bike-types__section-title">Road Bikes</h3>
+    <div class="carousel-container">
+      <div class="carousel-container__header">
+        <div class="carousel-container__header-item selected">
+          <p>Performance/Race</p>
+        </div>
+        <div class="carousel-container__header-item">Aero</div>
+        <div class="carousel-container__header-item">Endurance</div>
+      </div>
+      <div class="carousel-container__content">
+        <div class="paragraph-text">
+          <p>
+            Race bikes tend to sacrifice some of the comfort items that can be found on endurance bicycles for the pure
+            sake
+            of speed.
+          </p>
+          <p>
+            Rather than an upright, comfortable position, race bikes will put you in a lower, more aerodynamic
+            position. In addition, the frames will be geared towards a stiffer, more responsive dynamic which can
+            sacrifice
+            road absorption (asphalt texture and bumps).
+          </p>
+          <p>
+            Lastly, the pure race bikes will be outfitted with any and all parts that contribute the a lighter bike, but
+            without loss of power (stiffness). With the advancement of technology, "lower grade" materials are much
+            closer
+            in weight and performance than they were in the past.
+          </p>
+        </div>
+        <a href="#" class="btn btn-dark">Find Performance/Race Bikes</a>
+      </div>
+    </div>
+  </div>
+  <div class="mountain" id="mountain" #mountain>
+    <h3 class="heading-3 bike-types__section-title">Mountain Bikes</h3>
+    <p>This is all about mountain bikes</p>
+  </div>
+  <div class="triathlon" id="triathlon" #triathlon>
+    <h3 class="heading-3 bike-types__section-title">Triathlon/TT Bikes</h3>
+    <p>This is all about triathlon bikes</p>
+  </div>
+</div>
